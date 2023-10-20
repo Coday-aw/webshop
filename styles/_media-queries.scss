@@ -1,0 +1,23 @@
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin bp3 {
+  @media screen and (max-width: 582px) {
+    @content;
+  }
+}
+
+@mixin bp {
+  @media screen and (max-width: 910px) {
+    @content;
+  }
+}
+
+@mixin bp2 {
+  @media screen and (min-width: 768px) and (max-width: 771px) {
+    @content;
+  }
+}

@@ -1,0 +1,91 @@
+@import "media-queries";
+@import "_navbar.scss";
+$text-color: green;
+
+.page-title {
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline limegreen;
+  text-underline-offset: 10px;
+  color: rgb(57, 57, 57);
+
+  @include bp {
+    font-size: 18px;
+  }
+
+  @include tablet {
+    font-size: 14px;
+  }
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+  margin-top: 30px;
+  width: 100%;
+  place-items: center;
+
+  @include bp {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include bp3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 90%;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+
+    &__picture {
+      width: 200px;
+      cursor: pointer;
+
+      @include tablet {
+        width: 150px;
+      }
+    }
+    &__title {
+      font-size: 14px;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-bottom: 10px;
+
+      @include tablet {
+        font-size: 12px;
+      }
+    }
+    &__price {
+      padding-bottom: 10px;
+    }
+    &__availability {
+      font-size: 12px;
+      color: rgb(103, 103, 103);
+    }
+
+    & button {
+      margin-top: 10px;
+      padding: 6px 20px;
+      width: 100%;
+      font-size: 16px;
+      background-color: $text-color;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+}
